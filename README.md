@@ -99,6 +99,7 @@
         <img src="https://i.loli.net/2021/02/28/YBIPstrCp7Fc23W.png" alt="Neofetch BigSur" width="350">
     </p>
 </details> 
+
 ## Before installation
 
 <details>  
