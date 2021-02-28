@@ -90,13 +90,14 @@
 |   HfsPlus.efi   | OcBinaryData      |
 | OpenCanopy.efi  | OpenCorePkg 0.6.5 |
 | OpenRuntime.efi | OpenCorePkg 0.6.5 |
+
 </details>
 
 <details>
     <summary><strong>Neofetch 截图</strong></summary>
     <br>
     <p float="left">
-        <img src="https://i.loli.net/2021/02/28/YBIPstrCp7Fc23W.png" alt="Neofetch BigSur" width="350">
+        <img src="https://i.loli.net/2021/02/28/YBIPstrCp7Fc23W.png" alt="Neofetch BigSur" width="350"/>
     </p>
 </details> 
 
