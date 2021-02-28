@@ -101,7 +101,7 @@
     </p>
 </details> 
 
-## Before installation
+## 安装前
 
 <details>  
 
@@ -188,7 +188,7 @@ etc.
 
 </details>
 
-## Post-Install
+## 安装后
 
 <details>  
 
