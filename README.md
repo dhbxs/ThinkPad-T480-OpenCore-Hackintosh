@@ -33,7 +33,7 @@
 | 相机             | 720p 相机                                   |                                                              |
 | WIFI & Bluetooth | Intel Wireless-AC 8265                      | 使用 [AirportItlwm v1.3.0-alpha](https://github.com/OpenIntelWireless/itlwm/releases) 驱动 |
 | 有线网卡         | Ethernet Connection  I219-V                 | 英特尔 Ethernet Connection  I219-V / 联想                    |
-| 声卡             | 瑞昱  @ 英特尔 High Definition Audio 控制器 |                                                              |
+| 声卡             | 瑞昱  @ 英特尔 High Definition Audio 控制器 | alc=11                                                       |
 | 键鼠             | PS2 Keyboard & Synaptics TrackPad           | [YogaSMC](https://github.com/zhen-zen/YogaSMC) 用于媒体键（如麦克风开关等）PrtSc映射为F13 |
 
 </details>  
@@ -42,10 +42,10 @@
 <summary><strong>软件版本</strong></summary>
 <br>
 
-| Component     | Version        |
-| ------------- | -------------- |
-| macOS Big Sur | 11.2.1 (20C69) |
-| OpenCore      | v0.6.6         |
+| Component     | Version |
+| ------------- | ------- |
+| macOS Big Sur | 11.2.1  |
+| OpenCore      | v0.6.7  |
 
 </details>
 
@@ -86,10 +86,10 @@
 
 |     Driver      | Version           |
 | :-------------: | ----------------- |
-|  AudioDxe.efi   | OpenCorePkg 0.6.5 |
+|  AudioDxe.efi   | OpenCorePkg 0.6.7 |
 |   HfsPlus.efi   | OcBinaryData      |
-| OpenCanopy.efi  | OpenCorePkg 0.6.5 |
-| OpenRuntime.efi | OpenCorePkg 0.6.5 |
+| OpenCanopy.efi  | OpenCorePkg 0.6.7 |
+| OpenRuntime.efi | OpenCorePkg 0.6.7 |
 
 </details>
 
@@ -104,10 +104,8 @@
 ## 安装前
 
 <details>  
-
-<summary><strong>UEFI settings</strong></summary>
+<summary><strong>UEFI 设置</strong></summary>
 <br>
-
 **Security**
 
 - `Security Chip` **Disabled**
@@ -134,13 +132,12 @@
 </details>  
 
 <details>
-
-<summary><strong>Own prev-lang-kbd</strong></summary>
+<summary><strong>设置键盘规格</strong></summary>
 <br>
 
-Either add as a string or as a data ( HEX data [(ProperTree)](https://github.com/corpnewt/ProperTree) )
+根据你的键盘型号，填入以下值到`config.plist` -> `NVRAM` -> `7C436110-AB2A-4BBB-A880-FE41995C9F82` -> `prev-lang:kbd`
 
-Format is lang-COUNTRY:keyboard
+![截屏2021-03-06 下午8.09.10](https://cdn.jsdelivr.net/gh/zhao-v/blog-img@master/uPic/%E6%88%AA%E5%B1%8F2021-03-06%20%E4%B8%8B%E5%8D%888.09.10.png)
 
 - 🇺🇸 | [0] en_US - U.S --> en-US:0 --> 656e2d55 533a30
 
@@ -148,43 +145,9 @@ Format is lang-COUNTRY:keyboard
 
 - 🇨🇿 | cs-CZ:0 --> 63732d43 5a3a30
 
-etc.
+其他型号请查看以下文档：
 
 [AppleKeyboardLayouts.txt](https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/AppleKeyboardLayouts/AppleKeyboardLayouts.txt)
-
-</details>
-
-<details>
-
-<summary><strong>Secure Boot (Optional)</strong></summary>
-<br>
-
-1. Set Secure Boot to Setup Mode. Secure Boot should be reported as off by UEFI main tab
-2. Create FAT32 formatted USB
-3. Create EFI folder in the root of the newly formatted flash drive and move there content of SecureBoot/KeyTool
-4. Boot flash drive via F12 boot menu
-5. Choose **Edit keys**
-
-
-<img src="./Other/README_Resources/SecureBoot/MainMenu.png" alt="Main menu">
-
-6. Start by **replacing** Signature Database. Select .auth file
-
-
-<img src="./Other/README_Resources/SecureBoot/ManipulateKey.png" alt="Select key to manipulate with">
-<img src="./Other/README_Resources/SecureBoot/SelectAuth.png" alt="Select .auth file">
-
-
-7. Do the same for Key Exchange Keys Database (KEK) and Platform Key (PK) **in this order**
-8. Exit and shutdown your machine
-9. Boot into the UEFI settings and check if Secure Boot is reported as `on`
-10. Boot you favorite OS with Secure Boot enabled
-
-[More detailed information here](https://habr.com/en/post/273497)
-
-```diff
-! Still quite experimental
-```
 
 </details>
 
@@ -192,33 +155,10 @@ etc.
 
 <details>  
 
-<summary><strong>Colour banding</strong></summary>
-<br>
-
-If you encounter some serious colour banding issues ( Keep in mind that T480 1080p stock panel colour accuracy is not really good, cca 50-60% sRGB), your only solution is to replace GPU properties as bellow or replace the stock panel with one from T490 (400 nits, Low power).
-
-```
-<key>AAPL,ig-platform-id</key>
-<data>AAAWGQ==</data>
-<key>device-id</key>
-<data>FhkAAA==</data>
-</dict>
-```
-
-Do not use these any additional boot arguments! Get custom WhateverGreen version instead from Other folder
-
-You can check your screen in gradient test [here](https://www.eizo.be/monitor-test/) or just by simple look at Launchpad background.
-
-</details>  
-
-<details>  
-
-<summary><strong>Generate your own SMBIOS</strong></summary>
+<summary><strong>生成你自己的 SMBIOS 信息</strong></summary>
 <br>
 
 [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
-
-- MacBookPro14,1
 
 - MacBookPro15,2
 
@@ -226,95 +166,57 @@ You can check your screen in gradient test [here](https://www.eizo.be/monitor-te
 
 <details>  
 
-<summary><strong>CPUFriend power management</strong></summary>
+<summary><strong>CPUFriend 电源管理</strong></summary>
 <br>
 
-Generate CPUFriendDataProvider for your machine [here](https://github.com/fewtarius/CPUFriendFriend) or use at your own risk files provided in the Other folder.
+如果想要配置自己的CPUFriend驱动，请查看 [here](https://github.com/fewtarius/CPUFriendFriend) 
+也可以使用我提供的CPUFriend驱动。
 
 </details>  
 
-<details>  
-
-<summary><strong>VoltageShift undervolt</strong></summary>
-<br>
-
-It is possible to use VoltageShift directly from the EFI folder instead of disabling SIP. You need to use specific version provided in the Other folder.
-
-```diff
-! If you want to use this feature, enable it in config.plist
-```
-</details>  
+## 状态
 
 <details>  
 
-<summary><strong>Android USB Tethering | HoRNDIS</strong></summary>
-<br>
+<summary><strong>正常工作的硬件 ✅</strong></summary>
 
-> **Important:** Mac computers can't tether with Android. 
+- [x] 电池百分比
 
-I don't think so Google.
-
-1. Using a USB cable, connect your phone to the other device. A "Connected as a…" notification shows at the top of the screen.
-2. Open your phone's Settings app.
-3. Tap Network & internet ![And then](https://lh3.googleusercontent.com/WD3LKKej34vq3cZXwilgeahIPOiokN2uarmkDxtMqKMFg4SSys8BkOBJbn4_4R930gE=h18 "And then") Hotspot & tethering.
-4. Turn on USB tethering.
-
-You should see new Ethernet connection in the network settings. Works with USB Type C and USB A.
-
-```diff
-! If you want to use this feature, enable it in config.plist
-```
-Problems with recreating new `en` device every time are now solved on latest macOS versions with patched version of this kext. If it does not work for you, revert to official version.
-
-</details>  
-
-## Status
-
-<details>  
-
-<summary><strong>What's working ✅</strong></summary>
-
-- [x] Battery percentage
-
-- [x] Bluetooth - Intel Wireless-AC 8265 (0x0A2B) 
+- [x] 蓝牙和Wi-Fi - Intel Wireless-AC 8265 (0x0A2B) 
 
 - [x] Boot chime
 
 - [x] Boot menu `OpenCanopy` 
 
-- [x] CPU power management / performance `Now on par with Windows without XTU undervolt.`
+- [x] CPU 电源管理/ 性能`Now on par with Windows without XTU undervolt.`
 
 - [x] FireVault 2 `No config.plist changes needed` 
 
-- [x] GPU UHD 620 hardware acceleration / performance 
+- [x] GPU UHD 620 显卡硬件加速/性能 
 
-- [x] HDMI `Closed and opened lid. With audio.`
+- [x] HDMI 接口`Closed and opened lid. With audio.`
 
-- [x] iMessage, FaceTime, App Store, iTunes Store. **Generate your own SMBIOS**
+- [x] iMessage, FaceTime, App Store, iTunes Store. **需要生成自己的SMBIOS信息**
 
-- [x] Intel I219V Ethernet port
+- [x] Intel I219V 以太网卡/有线网卡
 
-- [x] Keyboard `Volume and brightness hotkeys. Another media keys with YogaSMC.`
+- [x] 键盘`Volume and brightness hotkeys. Another media keys with YogaSMC.`
 
-- [x] Microphone `With keyboard switch using ThinkPad Assistant.`
+- [x] 麦克风`With keyboard switch using ThinkPad Assistant.`
 
-- [x] Realtek® ALC3287 ("ALC257") Audio
+- [x] 声卡Realtek® ALC3287 ("ALC257") Audio
 
-- [x] SD card reader `Fortunately, USB connected.`
+- [x] SD 读卡器/卡槽 `Fortunately, USB connected.`
 
-- [x] Sidecar wired `Works with 15,2 SMBIOS.`
+- [x] 睡眠/唤醒
 
-- [x] Sleep/Wake 
+- [x] 触控板`1-5 fingers swipe works. Emulate force touch using longer and more voluminous touch.`
 
-- [x] TouchPad `1-5 fingers swipe works. Emulate force touch using longer and more voluminous touch.`
+- [x] 指点杆/小红点`Works perfectly. Just like on Windows or Linux.`
 
-- [x] TrackPoint  `Works perfectly. Just like on Windows or Linux.`
+- [x] USB 接口 `USB Map is different for devices with Windows Hello camera.`
 
-- [x] USB Ports `USB Map is different for devices with Windows Hello camera.`
-
-- [x] Web camera
-
-- [x] Wifi - Intel Wireless-AC 8265 `Use HeliPort app for Wi-Fi control`
+- [x] Wifi - Intel Wireless-AC 8265 
 
 - [x] DRM `Widevine, validated on Firefox 82. WhateverGreen's DRM is broken on Big Sur`
 
@@ -322,43 +224,21 @@ Problems with recreating new `en` device every time are now solved on latest mac
 
 <details>  
 
-<summary><strong>What's not working ⚠️</strong></summary>
-
-- [ ] Fingerprint reader  `There is finally after many years working driver for Linux (python-validity), don't expect macOS driver any time soon.`
+<summary><strong>未能正常工作的硬件⚠️</strong></summary>
 
 - [ ] PM 981 `Still unstable. Could work for some, not for others.`
 
-- [ ] Sidecar wireless `If you want to use this feature, buy a compatible Broadcom card!`
+- [ ] 无线随航`需要更换 Broadcom 网卡`
 
-- [ ] Windows/Linux from OC boot menu `It's best practice to not boot from OC when planning to perform firmware upgrade`
+- [ ] 从OC引导的Windows系统不能正常启动 
 
 
 </details>  
 
 <details>  
 
-<summary><strong>Untested</strong></summary>
+<summary><strong>未能测试</strong></summary>
 
-- [ ] Thunderbolt  `No device to test.`
-
-</details>  
-
-## UEFI modding
-
-<details>  
-
-<summary><strong>CFG Lock | Advanced menu</strong></summary>
-<br>
-
-<img align="left" src="./Other/README_Resources/SPI_Programmer_CH341a.jpg" alt="SPI_Programmer_CH341a.jpg" width="220">
-
-It's possible to unlock Advanced menu thus disable CFG Lock natively in UEFI + Other Advanced menu benefits. SPI Programmer CH341a is required
-
-<br>
-https://www.reddit.com/r/thinkpad/comments/ffqqx5/currently_testing_skyra1n/
-
-[T480 consuming 60w (~85w total) - unlimited TDP : thinkpad](https://www.reddit.com/r/thinkpad/comments/g8fk51/t480_consuming_60w_85w_total_unlimited_tdp/)
-
-[ThinkPad discord](discord.gg/Ybdz7AS)
+- [ ] Thunderbolt雷电接口  `没有设备做测试`
 
 </details>  
