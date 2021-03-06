@@ -16,6 +16,8 @@
 
 本仓库大量参考自 [https://github.com/EETagent/T480-OpenCore-Hackintosh](https://github.com/EETagent/T480-OpenCore-Hackintosh) 仓库，在此对原仓库作者表示感谢。
 
+对于国内用户，下载较慢，请访问 `Gitee` 仓库 [https://gitee.com/dhbxs/think-pad-t480-open-core0.6.7-hackintosh](https://gitee.com/dhbxs/think-pad-t480-open-core0.6.7-hackintosh)
+
 ## 基本介绍
 
 <details>
