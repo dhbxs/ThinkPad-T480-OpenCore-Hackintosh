@@ -1,11 +1,12 @@
-# ThinkPad-T480-OpenCore0.6.6-Hackintosh
- ThinkPad T480 OC0.6.6 黑苹果引导EFI
+# ThinkPad-T480-OpenCore0.6.7-Hackintosh
+ ThinkPad T480 OC0.6.7 黑苹果引导EFI
 
 **状态 | 稳定**
 
-![](https://img.shields.io/badge/MacOS-11.2.1-brightgreen)
+![MacOS](https://img.shields.io/badge/MacOS-11.2.2-brightgreen) 
+![OpenCore](https://img.shields.io/badge/OpenCore-0.6.7-blue.svg)
 
-![OpenCore](https://img.shields.io/badge/OpenCore-0.6.6-blue.svg)
+
 
 **免责声明:**
 
@@ -13,7 +14,7 @@
 
 如果您发现本 `EFI` 引导程序对你很有帮助，请给本仓库点一个 `Star` 以便让更多的人们看到。
 
-本仓库大量参考自[https://github.com/EETagent/T480-OpenCore-Hackintosh](https://github.com/EETagent/T480-OpenCore-Hackintosh) 仓库，在此对原仓库作者表示感谢。
+本仓库大量参考自 [https://github.com/EETagent/T480-OpenCore-Hackintosh](https://github.com/EETagent/T480-OpenCore-Hackintosh) 仓库，在此对原仓库作者表示感谢。
 
 ## 基本介绍
 
