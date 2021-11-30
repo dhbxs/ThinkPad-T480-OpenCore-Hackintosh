@@ -3,8 +3,8 @@
 
 **状态 | 稳定**
 
-![MacOS](https://img.shields.io/badge/MacOS-11.2.2-brightgreen) 
-![OpenCore](https://img.shields.io/badge/OpenCore-0.6.7-blue.svg)
+![MacOS](https://img.shields.io/badge/MacOS-12.0.1-brightgreen) 
+![OpenCore](https://img.shields.io/badge/OpenCore-0.7.5-blue.svg)
 
 
 
@@ -47,8 +47,8 @@
 
 | Component     | Version |
 | ------------- | ------- |
-| macOS Big Sur | 11.2.1  |
-| OpenCore      | v0.6.7  |
+| macOS Big Sur | 12.0.1  |
+| OpenCore      | v0.7.5  |
 
 </details>
 
