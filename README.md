@@ -1,5 +1,5 @@
-# ThinkPad-T480-OpenCore0.6.7-Hackintosh
- ThinkPad T480 OC0.6.7 黑苹果引导EFI
+# ThinkPad-T480-OpenCore0.7.5-Hackintosh
+ ThinkPad T480 OC0.7.5 黑苹果引导EFI
 
 **状态 | 稳定**
 
@@ -10,13 +10,13 @@
 
 **免责声明:**
 
-在开始配置您的EFI之前，请您务必仔细阅读 [OpenCore 0.6.6](https://dortania.github.io/OpenCore-Install-Guide/) 的官方安装指导文档，如使用本引导导致硬件出现各种故障或损坏，本人概不负责。如果您在使用本引导出现错误或者一些问题时，可以考虑在 `issues` 提问。
+在开始配置您的EFI之前，请您务必仔细阅读 [OpenCore 0.7.5](https://dortania.github.io/OpenCore-Install-Guide/) 的官方安装指导文档，如使用本引导导致硬件出现各种故障或损坏，本人概不负责。如果您在使用本引导出现错误或者一些问题时，可以考虑在 `issues` 提问。
 
 如果您发现本 `EFI` 引导程序对你很有帮助，请给本仓库点一个 `Star` 以便让更多的人们看到。
 
 本仓库大量参考自 [https://github.com/EETagent/T480-OpenCore-Hackintosh](https://github.com/EETagent/T480-OpenCore-Hackintosh) 仓库，在此对原仓库作者表示感谢。
 
-对于国内用户，下载较慢，请访问 `Gitee` 仓库 [https://gitee.com/dhbxs/think-pad-t480-open-core0.6.7-hackintosh](https://gitee.com/dhbxs/think-pad-t480-open-core0.6.7-hackintosh)
+对于国内用户，下载较慢，请访问 `Gitee` 仓库 [https://gitee.com/dhbxs/think-pad-t480-open-core0.7.5-hackintosh](https://gitee.com/dhbxs/think-pad-t480-open-core0.6.7-hackintosh)
 
 ## 基本介绍
 
