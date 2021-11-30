@@ -5,7 +5,7 @@
 
 ![MacOS](https://img.shields.io/badge/MacOS-12.0.1-brightgreen) 
 ![OpenCore](https://img.shields.io/badge/OpenCore-0.7.5-blue.svg)
-
+![star](https://gitee.com/dhbxs/think-pad-t480-open-core0.6.7-hackintosh/star.svg?theme=dark)(https://gitee.com/dhbxs/think-pad-t480-open-core0.6.7-hackintosh)
 
 
 **免责声明:**
