@@ -17,7 +17,7 @@
 
 对于国内用户，下载较慢，请访问 `Gitee` 仓库 [https://gitee.com/dhbxs/think-pad-t480-open-core0.7.5-hackintosh](https://gitee.com/dhbxs/think-pad-t480-open-core0.6.7-hackintosh)
 
-对于国外用户，请访问 `GitHub` 仓库 (https://github.com/zhao-v/ThinkPad-T480-Hackintosh)[https://github.com/zhao-v/ThinkPad-T480-Hackintosh]
+对于国外用户，请访问 `GitHub` 仓库 [https://github.com/zhao-v/ThinkPad-T480-Hackintosh](https://github.com/zhao-v/ThinkPad-T480-Hackintosh)
 
 ## 基本介绍
 
@@ -57,8 +57,6 @@
 <details>
 <summary><strong>Kernel 驱动版本 (以下列表更新不及时，具体以EFI包内文件为准)</strong></summary>
 <br>
-
-
 | Kext                   | Version        |
 | :--------------------- | -------------- |
 | AirportItlwm           | v2.0.0-stable  |
