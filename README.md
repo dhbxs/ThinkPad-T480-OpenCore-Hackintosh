@@ -32,8 +32,8 @@
 | CPU              | Intel Core i5-8250U [Kaby Lake R] | [英特尔 Core i5-8250U @ 1.60GHz 四核](https://ark.intel.com/content/www/us/en/ark/products/124967/intel-core-i5-8250u-processor-6m-cache-up-to-3-40-ghz.html) |
 | GPU              | Intel UHD 620                               | 英特尔 UHD Graphics 620 ( 128 MB / 联想 )                    |
 | SSD              | LITEON T11 Plus 256                         | 建兴256G nvme 固态硬盘                                       |
-| 内存 `1`          | 16GB DDR4 2666Mhz                           | 海力士(Hynix) DDR4 2666MHz 8GB |
-| 内存 `2`          | 16GB DDR4 2400Mhz                           | 金士顿(Kingston) DDR4 2400MHz 8GB |
+| 内存 `1`          | 8GB DDR4 2666Mhz                          | 海力士(Hynix) DDR4 2666MHz 8GB |
+| 内存 `2`          | 8GB DDR4 2400Mhz                          | 金士顿(Kingston) DDR4 2400MHz 8GB |
 | 电池             | 单电池                                      | 单个外置电池，无内置电池                                     |
 | 相机             | 720p 相机                                   |                                                              |
 | WIFI & Bluetooth | Intel Wireless-AC 8265                      | 使用 [AirportItlwm v2.0.0-stable](https://github.com/OpenIntelWireless/itlwm/releases) 驱动 |
