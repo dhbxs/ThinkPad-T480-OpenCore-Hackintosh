@@ -57,6 +57,7 @@
 <details>
 <summary><strong>Kernel 驱动版本 (以下列表更新不及时，具体以EFI包内文件为准)</strong></summary>
 <br>
+
 | Kext                   | Version        |
 | :--------------------- | -------------- |
 | AirportItlwm           | v2.0.0-stable  |
