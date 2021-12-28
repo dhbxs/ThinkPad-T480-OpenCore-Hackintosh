@@ -102,7 +102,7 @@
     <summary><strong>Neofetch 截图</strong></summary>
     <br>
     <p float="left">
-        <img src="https://i.loli.net/2021/02/28/YBIPstrCp7Fc23W.png" alt="Neofetch BigSur" width="350"/>
+        <img src="https://images-1251347845.cos.ap-shanghai.myqcloud.com/uPic/截屏2021-12-28 下午10.54.51.png" alt="Neofetch BigSur" width="350"/>
     </p>
 </details> 
 
