@@ -1,5 +1,7 @@
 # ThinkPad-T480-OpenCore0.7.5-Hackintosh
- ThinkPad T480 OC0.7.5 黑苹果引导EFI
+**ThinkPad T480 OC0.7.5 黑苹果引导EFI**
+
+**生命不息 - 折腾不止**
 
 **状态 | 稳定**
 
@@ -11,7 +13,7 @@
 
 在开始配置您的EFI之前，请您务必仔细阅读 [OpenCore 0.7.5](https://dortania.github.io/OpenCore-Install-Guide/) 的官方安装指导文档，如使用本引导导致硬件出现各种故障或损坏，本人概不负责。如果您在使用本引导出现错误或者一些问题时，可以考虑在 `issues` 提问。
 
-如果您发现本 `EFI` 引导程序对你很有帮助，请给本仓库点一个 `Star` 以便让更多的人们看到。
+如果您发现本 `EFI` 引导程序对你有帮助，请给本仓库点一个 `Star` 以便让更多的人们看到。
 
 本仓库大量参考自 [https://github.com/EETagent/T480-OpenCore-Hackintosh](https://github.com/EETagent/T480-OpenCore-Hackintosh) 仓库，在此对原仓库作者表示感谢。
 
@@ -47,10 +49,10 @@
 <summary><strong>软件版本</strong></summary>
 <br>
 
-| Component     | Version |
-| ------------- | ------- |
-| macOS Big Sur | 12.0.1  |
-| OpenCore      | v0.7.5  |
+| Component     | Version    |
+| ------------- | ---------- |
+| macOS Big Sur | 12.1 21C52 |
+| OpenCore      | v0.7.5     |
 
 </details>
 
