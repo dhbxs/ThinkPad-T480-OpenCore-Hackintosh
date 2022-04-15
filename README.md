@@ -113,6 +113,7 @@
 <details>  
 <summary><strong>UEFI 设置</strong></summary>
 <br>
+    
 **Security**
 
 - `Security Chip` **Disabled**
